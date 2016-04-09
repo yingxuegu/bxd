@@ -1,7 +1,7 @@
 ﻿/* DFX 小网站 样式 */
 
 /* 基本 */
-body { background-color:#E2E2E2;margin:5px; }
+body { background-color:#E4E4E4;margin:5px; }
 p    { margin:0;padding:0;text-indent:2em;line-height:1.3em;font-size:11pt;color:black; }
 div  { margin:0;padding:0; }
 /* 公用 */
@@ -142,8 +142,8 @@ div.leftMenu1 {
 	background-color:#BBB;
 }
 div.leftMenu1:hover, div.leftMenu1:active {
-	background-color:#EEE;
-	border:2px solid #333;
+	background-color:#E0E0E0;
+	border:2px solid #555;
 	width:166px;
 	height:28px;
 }
@@ -169,14 +169,21 @@ div.divpic {
 }
 
 /* 简报 */
+div.article0 {
+	margin:5px 8px 4px 8px;
+	padding:3px;
+	border:2px solid #999;
+}
 div.article1 {
-	margin:6px 10px;
+	margin:6px 8px;
 	padding:3px;
 	border:1px solid #999;
 }
 div.article1:hover {
-	background-color:#CCC;
+	background-color:#D3D3D3;
 	border-color:orangered;
+	border-width:2px;
+	padding:2px;
 }
 p.briefTitle {
 	text-align:left;

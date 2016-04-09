@@ -21,6 +21,63 @@
 
 </style>
 
+<script>
+var iStyle = 2;
+
+function switchStyle(){/*2016.3.26*/
+	x = document.getElementById("perCss");
+	switch(iStyle)
+	{
+	case 1:
+		x.href = "design/static2.css";
+		iStyle = 2;
+		break;
+	case 2:
+		x.href = "design/static1.css";
+		iStyle = 1;
+		break;
+	default:
+		x.href = "design/static2.css";
+		iStyle = 2;
+		break;
+	}
+	setStyleSta();
+}
+
+function resetStyle(){/*2016.3.26*/
+	x = document.getElementById("perCss");
+	x.href = "design/static2.css";
+	iStyle = 2;
+	setStyleSta();
+}
+
+function setStyleSta(){
+	switch(iStyle)
+	{
+	case 1:
+		x = document.getElementById("sty1");
+		y = document.getElementById("sty2");
+		break;
+	case 2:
+		x = document.getElementById("sty2");
+		y = document.getElementById("sty1");
+		break;
+	}
+	x.style.backgroundColor = "orange";
+	x.style.fontWeight = "bold";
+	y.style.backgroundColor = "";
+	y.style.fontWeight = "normal";
+}
+
+/*留用*//*
+var iStyleNum = _;
+function autoStyle(){
+	if(iStyle < iStyleNum)
+	else if(iStyle == iStyleNum)
+}
+*/
+</script>
+
 </head><body>
 
 <div id="commonhead">
@@ -30,7 +87,7 @@
 	<p id="commonheadp4">Topic Frame for Collecting of Dialect and Folklore (for Xinbin), TFCDF(Xinbin) &nbsp;&nbsp;v1.1 (Mar 2016)</p>
 	<p id="commonheadp5">统计</p>
 	<p id="commonheadp6">
-		<span id="hp6s1">当前位置: <a href="index.htm" class="headlink">框架首页</a><span class="smallspan">(一级话题列表)</span> &#62;&#62; 统计</span>
+		<span id="hp6s1">当前位置: <a href="main.htm" class="headlink">框架首页</a><span class="smallspan">(一级话题列表)</span> &#62;&#62; 统计</span>
 		&nbsp;&nbsp;<a class="toBottom" href="frame/static.htm#commonbottom">去底部</a>
 	</p>
 	<hr id="headhr" />
@@ -51,6 +108,10 @@
 			<td><a class="navilink" href="frame/static.htm#table7-a">7 业界</a></td>
 		</tr>
 	</table>
+	<p class="para p0 narr">
+		<a class="good" onclick="switchStyle()">切换页面风格</a> <a class="good" onclick="resetStyle()" style="margin-left:1em;">默认风格</a>
+		&nbsp;当前风格：<span id="sty1" class="arial">1</span> <span id="sty2" class="arial" style="background-color:orange;font-weight:bold;">2</span>(默认)
+	</p>
 </div>
 
 <p id="tip_ex">本框架共有<em>一级话题</em><span class="num">7</span>个，<em>二级话题</em><span class="num">58</span>个，<em>三级话题</em><span class="num">250</span>个，<em>四级话题</em><span class="num">314</span>个。所有话题共<span class="num">629</span>个。</p>
@@ -697,7 +758,7 @@
 	<div id="bottombar2">
 		<table id="btmlinktable2">
 			<tr>
-				<td class="longTD"><a href="index.htm">一级话题列表<span style="font-size:10pt;">(首页)</span></a></td>
+				<td class="longTD"><a href="main.htm">一级话题列表<span style="font-size:10pt;">(首页)</span></a></td>
 				<td><a href="frame/list/classIV.htm">所有话题列表</a></td>
 				<td class="shortTD"><a target="_blank" href="frame/static.htm" id="thispage">统计</a></td>
 				<td class="shortTD"><a href="frame/intro.htm">说明</a></td>
@@ -723,4 +784,6 @@ v1.1发布
 
 修改记录
 ----------
+3.26增加js切换风格
+
 -->
